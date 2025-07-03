@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  database:
+    image: postgres:latest
+    container_name: postgres_container
+    environment:
+      - POSTGRES_USER=usuario
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=MI_PRIMERA_DB
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
+   
+  
